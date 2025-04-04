@@ -2,14 +2,14 @@
 #include "calculator.h"
 
 void testBasicOperations(Calculator& calc) {
-    std::cout << "--- Testing Basic Operations ---\n";
-    std::cout << "5 + 3 = " << calc.add(5, 3) << "\n";
-    std::cout << "5 - 3 = " << calc.subtract(5, 3) << "\n";
-    std::cout << "5 * 3 = " << calc.multiply(5, 3) << "\n";
+    std::cout << "--- Basic Operations ---\n";
+    std::cout << "5 + 4 = " << calc.add(5, 4) << "\n";
+    std::cout << "9 - 7 = " << calc.subtract(9, 7) << "\n";
+    std::cout << "10 * 3 = " << calc.multiply(10, 3) << "\n";
 
     try {
-        std::cout << "5 / 3 = " << calc.divide(5, 3) << "\n";
-        std::cout << "5 / 0 = "; // This should throw
+        std::cout << "6 / 3 = " << calc.divide(6, 3) << "\n";
+        std::cout << "2 / 0 = ";
         std::cout << calc.divide(5, 0) << "\n";
     } catch (const std::invalid_argument& e) {
         std::cout << "Error: " << e.what() << "\n";
@@ -17,11 +17,11 @@ void testBasicOperations(Calculator& calc) {
 }
 
 void testAdvancedOperations(Calculator& calc) {
-    std::cout << "\n--- Testing Advanced Operations ---\n";
-    std::cout << "Factorial of 5 = " << calc.factorial(5) << "\n";
+    std::cout << "\n--- Advanced Operations ---\n";
+    std::cout << "Factorial of 14 = " << calc.factorial(14) << "\n";
 
     try {
-        std::cout << "Factorial of -2 = "; // This should throw
+        std::cout << "Factorial of -2 = ";
         std::cout << calc.factorial(-2) << "\n";
     } catch (const std::invalid_argument& e) {
         std::cout << "Error: " << e.what() << "\n";
@@ -32,7 +32,7 @@ void testAdvancedOperations(Calculator& calc) {
 }
 
 void testRandomNumber(Calculator& calc) {
-    std::cout << "\n--- Testing Random Number Generation ---\n";
+    std::cout << "\n--- Random Number Generation ---\n";
     std::cout << "Random number between 1 and 100: ";
     for (int i = 0; i < 3; ++i) {
         std::cout << calc.generateRandom(1, 100);
@@ -40,7 +40,7 @@ void testRandomNumber(Calculator& calc) {
     }
     std::cout << "\n";
 
-    std::cout << "Random number between 50 and 10 (should auto-correct range): ";
+    std::cout << "Random number between 50 and 10: ";
     std::cout << calc.generateRandom(50, 10) << "\n";
 }
 
