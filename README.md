@@ -29,7 +29,10 @@ cmake --build .
 After building the project, run the test executable:
 
 ```bash
-./calculator_test
+mkdir build && cd build
+cmake .. -G "MinGW Makefiles"
+cmake --build .
+./CalculatorProject.exe
 ```
 
 ## Project Structure
