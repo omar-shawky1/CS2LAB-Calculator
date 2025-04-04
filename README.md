@@ -12,7 +12,10 @@ A simple calculator library in C++ that includes several mathematical operations
 ### Using CMake
 
 ```bash
-# Create and navigate to build directory
+# Access the project location
+cd ~/YourLocation/CalculatorProject
+
+# Create and navigate to the build directory
 mkdir -p build
 cd build
 
@@ -29,9 +32,6 @@ cmake --build .
 After building the project, run the test executable:
 
 ```bash
-mkdir build && cd build
-cmake .. -G "MinGW Makefiles"
-cmake --build .
 ./CalculatorProject.exe
 ```
 
