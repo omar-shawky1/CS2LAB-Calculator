@@ -1,11 +1,8 @@
-//
-// Created by pc on 4/4/2025.
-//
-
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
 
-class Calculator {
+class Calculator
+{
 public:
     double add(double a, double b);
     double subtract(double a, double b);
@@ -20,4 +17,4 @@ public:
 
 
 
-#endif //CALCULATOR_H
+#endif
